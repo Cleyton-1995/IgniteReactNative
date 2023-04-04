@@ -4,6 +4,11 @@ import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
 
 export function Home() {
+
+  function handlePaticipantAdd() {
+    console.log("Você clicou no botão de Adicionar!")
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.eventName}>Nome do Evento</Text>
