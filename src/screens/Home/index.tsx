@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, TextInput, View } from "react-native";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
 
 import { styles } from "./styles";
 
@@ -15,6 +15,12 @@ export function Home() {
         placeholder="Nome do participante"
         placeholderTextColor="#6B6B6B"
       />
+
+      <TouchableOpacity style={styles.button} >
+        <Text style={styles.buttonText} >
+          +
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }
