@@ -21,7 +21,7 @@ export function Home() {
         placeholderTextColor="#6B6B6B"
       />
 
-      <TouchableOpacity style={styles.button} >
+      <TouchableOpacity style={styles.button} activeOpacity={0.8} onPress={handlePaticipantAdd} >
         <Text style={styles.buttonText} >
           +
         </Text>
