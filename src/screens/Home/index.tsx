@@ -9,6 +9,10 @@ export function Home() {
     console.log("Você clicou no botão de Adicionar!");
   }
 
+  function handlePaticipantRemove(name: string) {
+    console.log(`Você clicou em Remover participante! ${name}`);
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.eventName}>Nome do Evento</Text>
