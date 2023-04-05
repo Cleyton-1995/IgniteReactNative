@@ -35,9 +35,7 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
-      <Participant name="Cleyton Costa" />
-      <Participant name="Olívia Cristina" />
-      <Participant name="Bernardo Miguel" />
+      <Participant name="Cleyton Costa" onRemove={() => handlePaticipantRemove("Cleyton Costa")} />
     </View>
   );
 }
