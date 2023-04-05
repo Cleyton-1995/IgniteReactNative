@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  FlatList,
   ScrollView,
   Text,
   TextInput,
@@ -52,15 +53,17 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
-      <ScrollView showsHorizontalScrollIndicator={false} >
-        {participants.map((participant) => (
+      <FlatList
+        data={participants}
+        keyExtractor={(item) => item}
+        renderItem={({ item }) => (
           <Participant
-            name={participant}
-            key={participant}
+            name={item}
+            key={item}
             onRemove={() => handlePaticipantRemove("Cleyton Costa")}
           />
-        ))}
-      </ScrollView>
+        )}
+      />
     </View>
   );
 }
