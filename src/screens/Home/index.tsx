@@ -14,14 +14,14 @@ import { styles } from "./styles";
 
 export function Home() {
   const [participants, setParticipants] = useState<string[]>([])
-  const [participantsName, setParticipantsName] = useState([""])
+  const [participantName, setParticipantName] = useState([""])
     
 
   function handlePaticipantAdd() {
-   if(participants.includes("")) {
+   if(participants.includes(participantName)) {
     return Alert.alert(" Participante existe", "Já existe um participante na lista com esse nome.")
    }
-   setParticipants(prevState => [...prevState , "Olívia"])
+   setParticipants(prevState => [...prevState , participantName])
   }
 
 
