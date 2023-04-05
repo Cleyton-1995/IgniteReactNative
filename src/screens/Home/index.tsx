@@ -13,7 +13,7 @@ import { Participant } from "../../components/Participant";
 import { styles } from "./styles";
 
 export function Home() {
-  const [participants, setParticipants] = useState(["Cleyton"])
+  const [participants, setParticipants] = useState<string[]>([])
     
 
   function handlePaticipantAdd() {
