@@ -5,8 +5,16 @@ import { Participant } from "../../components/Participant";
 import { styles } from "./styles";
 
 export function Home() {
-
-  const participants = ["Cleyton", "Bernardo", "Olívia", "Gabriela", "Francisco", "Raimunda", "Rosangela", "José"]
+  const participants = [
+    "Cleyton",
+    "Bernardo",
+    "Olívia",
+    "Gabriela",
+    "Francisco",
+    "Raimunda",
+    "Rosangela",
+    "José",
+  ];
 
   function handlePaticipantAdd() {
     console.log("Você clicou no botão de Adicionar!");
@@ -21,8 +29,8 @@ export function Home() {
       <Text style={styles.eventName}>Nome do Evento</Text>
 
       <Text style={styles.eventDate}>Terça-feira, 04 de abril de 2023.</Text>
-      
-      <View style={styles.form} >
+
+      <View style={styles.form}>
         <TextInput
           style={styles.input}
           placeholder="Nome do participante"
@@ -38,7 +46,13 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
-      <Participant name="Cleyton Costa" onRemove={() => handlePaticipantRemove("Cleyton Costa")} />
+      {participants.map((participant) => (
+        <Participant
+          name={participant}
+          key={participant}
+          onRemove={() => handlePaticipantRemove("Cleyton Costa")}
+        />
+      ))}
     </View>
   );
 }
