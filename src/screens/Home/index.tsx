@@ -52,7 +52,7 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
-      <ScrollView>
+      <ScrollView showsHorizontalScrollIndicator={false} >
         {participants.map((participant) => (
           <Participant
             name={participant}
