@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Alert,
   FlatList,
   ScrollView,
   Text,
@@ -24,7 +25,9 @@ export function Home() {
   ];
 
   function handlePaticipantAdd() {
-    console.log("Você clicou no botão de Adicionar!");
+   if(participants.includes("Cleyton")) {
+    return Alert.alert(" Participante existe", "Já existe um participante na lista com esse nome.")
+   }
   }
 
   function handlePaticipantRemove(name: string) {
@@ -66,7 +69,7 @@ export function Home() {
         showsHorizontalScrollIndicator={false}
         ListEmptyComponent={() => (
           <Text style={styles.listEmptyText} >
-            Ninguém chegou no evento ainda? Adicione participantes à sua lista de presença;
+            Ninguém chegou no evento ainda? Adicione participantes à sua lista de presença.
           </Text>
         )}
       />
