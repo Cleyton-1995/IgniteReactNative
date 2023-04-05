@@ -31,7 +31,16 @@ export function Home() {
   }
 
   function handlePaticipantRemove(name: string) {
-    console.log(`Você clicou em remover o participante ${name}`);
+    Alert.alert("Remover", `Remover o participante ${name}?`, [
+      {
+        text: "Sim",
+        onPress: () => Alert.alert("Deletado!")
+      },
+      {
+        text: "Não",
+        style: "cancel"
+      }
+    ]);
   }
 
   return (
@@ -63,7 +72,7 @@ export function Home() {
           <Participant
             name={item}
             key={item}
-            onRemove={() => handlePaticipantRemove("Cleyton Costa")}
+            onRemove={() => handlePaticipantRemove(item)}
           />
         )}
         showsHorizontalScrollIndicator={false}
