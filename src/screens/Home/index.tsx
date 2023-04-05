@@ -14,6 +14,7 @@ import { styles } from "./styles";
 
 export function Home() {
   const [participants, setParticipants] = useState<string[]>([])
+  const [participantsName, setParticipantsName] = useState([""])
     
 
   function handlePaticipantAdd() {
