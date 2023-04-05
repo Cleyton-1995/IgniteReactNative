@@ -5,12 +5,15 @@ import { Participant } from "../../components/Participant";
 import { styles } from "./styles";
 
 export function Home() {
+
+  const participants = ["Cleyton", "Bernardo", "Olívia", "Gabriela", "Francisco", "Raimunda", "Rosangela", "José"]
+
   function handlePaticipantAdd() {
     console.log("Você clicou no botão de Adicionar!");
   }
 
   function handlePaticipantRemove(name: string) {
-    console.log(`Você clicou em Remover participante! ${name}`);
+    console.log(`Você clicou em remover o participante ${name}`);
   }
 
   return (
