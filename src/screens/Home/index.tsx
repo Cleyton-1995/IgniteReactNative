@@ -1,5 +1,11 @@
 import React from "react";
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import {
+  ScrollView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { Participant } from "../../components/Participant";
 
 import { styles } from "./styles";
@@ -46,13 +52,15 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
-      {participants.map((participant) => (
-        <Participant
-          name={participant}
-          key={participant}
-          onRemove={() => handlePaticipantRemove("Cleyton Costa")}
-        />
-      ))}
+      <ScrollView>
+        {participants.map((participant) => (
+          <Participant
+            name={participant}
+            key={participant}
+            onRemove={() => handlePaticipantRemove("Cleyton Costa")}
+          />
+        ))}
+      </ScrollView>
     </View>
   );
 }
