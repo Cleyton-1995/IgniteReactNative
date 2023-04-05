@@ -63,6 +63,7 @@ export function Home() {
             onRemove={() => handlePaticipantRemove("Cleyton Costa")}
           />
         )}
+        showsHorizontalScrollIndicator={false}
       />
     </View>
   );
